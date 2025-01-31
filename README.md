@@ -1,93 +1,22 @@
-# Sprints Shopping App with Localization
+# Sprints Shopping App with Firebase Authentication
 
-Welcome to **Sprints Shopping App with Localization**, a Flutter project designed to showcase a simple yet elegant grocery shopping app. This project demonstrates the use of various Flutter widgets and packages to create a visually appealing and functional user interface.
+A shopping app with Firebase authentication, localization, and animations.
 
-### App Demo Video 🎥
+## App Demo Video 🎥
 
-[Watch the localization demo video here](https://github.com/user-attachments/assets/97e05f41-2573-4f31-b53e-a85af759cbf4)
+[Watch the firebase auth demo video here]()
 
-## Screenshots (English)
+## Screenshots
 
-| Splash                                                                                       | Signin                                                                                       | Signup                                                                                       | Home                                                                                         | Adding to Cart                                                                               |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/user-attachments/assets/27ad281a-4d6b-4d93-8401-52f19159fc90"/> | <img src="https://github.com/user-attachments/assets/d2a658b2-0159-4c3c-9b1a-235c70a9a4f1"/> | <img src="https://github.com/user-attachments/assets/2a514191-61d7-45d4-80b6-58cf923e0bed"/> | <img src="https://github.com/user-attachments/assets/872ef61c-0d43-4220-9230-14aef670e55b"/> | <img src="https://github.com/user-attachments/assets/c5b12af0-dad4-4559-ba96-9d4bb1339545"/> |
-
-## Screenshots (Arabic)
-
-| Splash                                                                                       | Signin                                                                                       | Signup                                                                                       | Home                                                                                         | Adding to Cart                                                                               |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/user-attachments/assets/27ad281a-4d6b-4d93-8401-52f19159fc90"/> | <img src="https://github.com/user-attachments/assets/ee98c912-1965-413b-8003-4cb97fa6b05b"/> | <img src="https://github.com/user-attachments/assets/1efbeff6-7108-44aa-955d-cf46fd5ecd21"/> | <img src="https://github.com/user-attachments/assets/65f555bf-29ef-49f3-b44c-2980500bfdfb"/> | <img src="https://github.com/user-attachments/assets/5abc27a8-e409-4c36-9d99-7488d1d48d45"/> |
+| Login      | Signup      |
+| ---------- | ----------- |
+| ![Login]() | ![Signup]() |
 
 ## Features
 
-- **Home Banner**: A carousel slider displaying promotional images.
-- **Best Selling Section**: A grid view showcasing the best-selling products.
-- **Hot Offers Section**: A horizontally scrollable list view displaying hot offers with images and text.
-
-## Localization
-
-This project supports localization for English and Arabic languages. The localization is implemented using the `intl` package.
-
-### Adding a New Language
-
-To add a new language, follow these steps:
-
-1. Create a new ARB file in the `l10n` directory (e.g., `intl_ar.arb` for Arabic).
-2. Add the translations for the new language in the ARB file.
-3. Update the `supportedLocales` in the `main.dart` file to include the new language.
-4. Run the build command to generate the localization files:
-   ```sh
-   Flutter Intl: initialize
-   ```
-
-### Toggling Languages
-
-The app includes a language toggle button in the home screen app bar. When the button is pressed, the app toggles between English and Arabic.
-
-#### Example Code for Toggling Languages
-
-In the `Home` app bar:
-```dart
-IconButton(
-  onPressed: () {
-    context.read<LanguageCubit>().toggleLanguage();
-  },
-  icon: SvgPicture.asset(
-    SvgAssets.homeLangIcon,
-    width: 35,
-  ),
-),
-```
-
-In the `LanguageCubit`:
-```dart
-class LanguageCubit extends Cubit<Locale> {
-  LanguageCubit() : super(const Locale('en')) {
-    _loadCurrentLocale();
-  }
-
-  void _loadCurrentLocale() async {
-    String? currentLocale =
-        await SharedPrefHelper.getString(SharedPrefKeys.currentLocale);
-    if (currentLocale != null) {
-      emit(Locale(currentLocale));
-    }
-  }
-
-  void toggleLanguage() async {
-    if (state.languageCode == 'en') {
-      await saveCurrentLocale("ar");
-      emit(const Locale('ar'));
-    } else {
-      await saveCurrentLocale("en");
-      emit(const Locale('en'));
-    }
-  }
-
-  Future<dynamic> saveCurrentLocale(String locale) async =>
-      await SharedPrefHelper.setData(SharedPrefKeys.currentLocale, locale);
-}
-```
+- **Firebase Authentication**: The app supports user authentication using Firebase.
+- **Localization**: The app supports English and Arabic languages.
+- **Animations**: The app includes animations for a better user experience.
 
 ## Packages Used
 
@@ -97,6 +26,7 @@ class LanguageCubit extends Cubit<Locale> {
 - **[flutter_screenutil](https://pub.dev/packages/flutter_screenutil)**: For adapting screen and font size to different screen sizes.
 - **[flutter_secure_storage](https://pub.dev/packages/flutter_secure_storage)**: For storing data securely.
 - **[firebase_core](https://pub.dev/packages/firebase_core)**: For Firebase core functionalities.
+- **[firebase_auth](https://pub.dev/packages/firebase_auth)**: For Firebase authentication.
 - **[lottie](https://pub.dev/packages/lottie)**: For Lottie animations.
 - **[cupertino_icons](https://pub.dev/packages/cupertino_icons)**: For iOS style icons.
 - **[dio](https://pub.dev/packages/dio)**: For networking.
@@ -119,11 +49,11 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/OmarAmeer96/Sprints-Shopping-App-with-Animation.git
+   git clone https://github.com/OmarAmeer96/Sprints-Firebase-Auth-Task.git
    ```
 2. **Navigate to the project directory**:
    ```sh
-   cd Sprints-Shopping-App
+   cd Sprints-Firebase-Auth-Task
    ```
 3. **Install dependencies**:
    ```sh
