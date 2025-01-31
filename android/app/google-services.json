@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "37031961174",
+    "project_id": "go-egypt-9e91b",
+    "storage_bucket": "go-egypt-9e91b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37031961174:android:322859a270216a15ab51f7",
+        "android_client_info": {
+          "package_name": "com.example.go_egypt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZagDjK7DWqKU-eAbQBVN73CemGRv_7sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37031961174:android:5139b3701bd1f895ab51f7",
+        "android_client_info": {
+          "package_name": "com.example.sprints_shopping_app_with_localization"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZagDjK7DWqKU-eAbQBVN73CemGRv_7sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
