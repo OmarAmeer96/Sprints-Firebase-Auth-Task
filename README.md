@@ -4,13 +4,13 @@ A shopping app with Firebase authentication, localization, and animations.
 
 ## App Demo Video 🎥
 
-[Watch the firebase auth demo video here]()
+[Watch the firebase auth demo video here](https://github.com/user-attachments/assets/42cf92cb-30d0-4bd9-b80c-21c7408835be)
 
 ## Screenshots
 
 | Login      | Signup      |
 | ---------- | ----------- |
-| ![Login]() | ![Signup]() |
+| ![Login](https://github.com/user-attachments/assets/654aee8c-38d0-409b-a29b-74d4d6b056cf) | ![Signup](https://github.com/user-attachments/assets/c64bc545-6d50-4810-a98b-c93892d72ee9) |
 
 ## Features
 
